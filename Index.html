@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ATRIA - Mejoras</title>
+
+<style>
+body {
+  margin:0;
+  font-family:'Segoe UI', Arial;
+  background:#0b1220;
+  color:white;
+}
+
+/* SECCIONES */
+.section {
+  padding:80px 10%;
+  border-bottom:1px solid #1f2937;
+}
+
+h1 { font-size:60px; margin-bottom:10px; }
+h2 { font-size:38px; color:#4cc9f0; margin-bottom:20px; }
+p { font-size:20px; line-height:1.6; }
+
+/* INTRO */
+.intro {
+  max-width:900px;
+}
+
+/* BANCOS */
+.bank {
+  display:flex;
+  gap:40px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.bank img {
+  width:180px;
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.bank img:hover {
+  transform:scale(1.1);
+}
+
+/* TABLA */
+.table-container {
+  overflow:auto;
+  margin-top:30px;
+  border-radius:12px;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:16px;
+}
+
+th, td {
+  border:1px solid #374151;
+  padding:10px;
+  text-align:center;
+}
+
+th {
+  background:#1f2937;
+  font-size:18px;
+}
+
+.si { color:#22c55e; font-weight:bold; }
+.op { color:#9ca3af; }
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  margin-top:30px;
+}
+
+/* CARDS PREMIUM */
+.card-pro {
+  position:relative;
+  background:linear-gradient(145deg,#111827,#0f172a);
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #1f2937;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card-pro::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#4cc9f0,#22c55e,#f59e0b);
+}
+
+.card-pro:hover {
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 15px 40px rgba(76,201,240,0.2);
+}
+
+.icon {
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.highlight {
+  color:#4cc9f0;
+  font-weight:bold;
+}
+
+/* BOTON TOP */
+.top-btn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#4cc9f0;
+  color:#0b1220;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior:smooth;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="section">
+<h1>🚀 ATRIA</h1>
+<h2>Mejoras Implementadas</h2>
+
+<p class="intro">
+Con el objetivo de optimizar la experiencia del usuario y mejorar la eficiencia en los procesos de radicación,
+se implementaron mejoras clave en el chatbot ATRIA.
+<br><br>
+Estas mejoras permiten:
+<br><br>
+✔ Reducir errores en la información ingresada<br>
+✔ Agilizar el proceso de registro<br>
+✔ Mejorar validaciones automáticas<br>
+✔ Incrementar la flexibilidad en la gestión de datos  
+<br><br>
+A continuación se presentan los cambios implementados.
+</p>
+</div>
+
+<!-- BANCOS -->
+<div class="section">
+<h2>🏦 Nuevos Bancos Configurados</h2>
+
+<div class="bank">
+<img src="iris.jpg">
+<img src="lulo.png">
+<img src="nu.png">
+</div>
+
+<p>
+IRIS CF COMPAÑIA DE FINANCIAMIENTO SA<br>
+LULO BANK SA<br>
+NU COLOMBIA COMPAÑIA DE FINANCIAMIENTO SA
+</p>
+</div>
+
+<!-- TABLA -->
+<div class="section">
+<h2>⚙️ Flexibilidad en Actualización de Datos</h2>
+
+<p>
+Se optimizó el flujo permitiendo que múltiples campos ya no sean obligatorios,
+lo que mejora la velocidad de radicación y reduce errores.
+</p>
+
+<div class="table-container">
+<table>
+
+<tr>
+<th colspan="2">Modulo AP</th>
+<th colspan="2">Modulo AR</th>
+</tr>
+
+<tr>
+<th>Campos</th><th>Obligatorio</th>
+<th>Campos</th><th>Obligatorio</th>
+</tr>
+
+<tr><td>#</td><td class="si">SI</td><td>#</td><td class="si">SI</td></tr>
+<tr><td>EMPRESA</td><td class="si">SI</td><td>EMPRESA</td><td class="si">SI</td></tr>
+<tr><td>NUMERO DOCUMENTO</td><td class="si">SI</td><td>NUMERODOCUMENTO</td><td class="si">SI</td></tr>
+<tr><td>TIPO DOCUMENTO</td><td class="si">SI</td><td>TIPO DOCUMENTO</td><td class="si">SI</td></tr>
+<tr><td>NOMBRE 1</td><td class="si">SI</td><td>NOMBRE 1</td><td class="si">SI</td></tr>
+<tr><td>NOMBRE 2</td><td class="op">OPCIONAL</td><td>NOMBRE2</td><td class="op">OPCIONAL</td></tr>
+<tr><td>APELLIDO 1</td><td class="op">OPCIONAL</td><td>APELLIDO1</td><td class="op">OPCIONAL</td></tr>
+<tr><td>APELLIDO 2</td><td class="op">OPCIONAL</td><td>APELLIDO2</td><td class="op">OPCIONAL</td></tr>
+<tr><td>DIRECCION</td><td class="op">OPCIONAL</td><td>DIRECCION</td><td class="op">OPCIONAL</td></tr>
+<tr><td>MUNICIPIO</td><td class="si">SI</td><td>MUNICIPIO</td><td class="op">OPCIONAL</td></tr>
+<tr><td>TELEFONO</td><td class="op">OPCIONAL</td><td>TELEFONO</td><td class="op">OPCIONAL</td></tr>
+<tr><td>EMAIL RUT</td><td class="op">OPCIONAL</td><td>CORREOELECTRONICO</td><td class="op">OPCIONAL</td></tr>
+<tr><td>EMAIL TEF</td><td class="op">OPCIONAL</td><td>PAIS</td><td class="op">OPCIONAL</td></tr>
+<tr><td>ACTIVIDAD ECONOMICA</td><td class="op">OPCIONAL</td><td>CLASE CONTRIBUYENTE</td><td class="op">OPCIONAL</td></tr>
+<tr><td>METODO DE PAGO</td><td class="op">OPCIONAL</td><td>CUENTAS A COBRAR</td><td class="op">OPCIONAL</td></tr>
+<tr><td>TERMINO DE PAGO</td><td class="op">OPCIONAL</td><td>INGRESOS</td><td class="op">OPCIONAL</td></tr>
+<tr><td>GRUPO DE PAGO</td><td class="op">OPCIONAL</td><td>IMPUESTOS</td><td class="op">OPCIONAL</td></tr>
+<tr><td>NOMBRE BANCO</td><td class="op">OPCIONAL</td><td>VENDEDOR</td><td class="si">SI</td></tr>
+<tr><td>NUMERO CUENTA</td><td class="op">OPCIONAL</td><td>TERMINO DE PAGO</td><td class="op">OPCIONAL</td></tr>
+<tr><td>TIPO CUENTA</td><td class="op">OPCIONAL</td><td>RESPONSABILIDAD FISCAL 1</td><td class="op">OPCIONAL</td></tr>
+<tr><td>CONCEPTO FACTURA</td><td class="si">SI</td><td>RESPONSABILIDAD FISCAL 2</td><td class="op">OPCIONAL</td></tr>
+<tr><td>OBSERVACIONES</td><td class="op">OPCIONAL</td><td>OBSERVACIONES</td><td class="si">SI</td></tr>
+
+</table>
+</div>
+</div>
+
+<!-- MEJORAS -->
+<div class="section">
+<h2>🔧 Mejoras Funcionales</h2>
+
+<div class="grid">
+
+<div class="card-pro">
+<div class="icon">🧠</div>
+<h3>Validaciones Inteligentes</h3>
+<p>
+<span class="highlight">✔ Control de identificación:</span> máximo 9 dígitos en flujo jurídico.<br><br>
+<span class="highlight">✔ Normalización de nombres:</span> límites en Nombre 2, Apellido 1 y Apellido 2 en flujo jurídico.<br><br>
+<span class="highlight">✔ Validación dinámica:</span> Email TEF obligatorio solo en pagos electrónicos.
+</p>
+</div>
+
+<div class="card-pro">
+<div class="icon">🔄</div>
+<h3>Optimización de Flujos Otros proveedores</h3>
+<p>
+<span class="highlight">✔ Flujo individual:</span> proveedores.<br><br>
+<span class="highlight">✔ Flujo masivo:</span> legalizaciones.<br><br>
+Mayor rapidez y organización en los procesos.
+</p>
+<img src="provedores.png" style="width:100%; margin-top:15px; border-radius:10px;">
+</div>
+
+<div class="card-pro">
+<div class="icon">⚠️</div>
+<h3>Gestión Inteligente de Errores</h3>
+<p>
+<span class="highlight">✔ Mayor visibilidad:</span> Se indican los errores completos en RUT y bancos.<br><br>
+<span class="highlight">✔ Validaciones automáticas:</span> detección inmediata.<br><br>
+Menos reprocesos y corrección más rápida.
+</p>
+</div>
+
+</div>
+</div>
+
+<button class="top-btn" onclick="window.scrollTo(0,0)">⬆</button>
+
+</body>
+</html>
